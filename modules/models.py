@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine, Column, Integer, String, Boolean, Date, ForeignKey, Numeric, BigInteger
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker, relationship
-
+from .params import DB_URL
 Base = declarative_base()
 
 class User(Base):
@@ -65,7 +65,8 @@ class SubscriptionPlan(Base):
 
 
 # Replace 'postgresql://user:password@localhost/mydatabase' with your actual database URL
-engine = create_engine('')
+db_url = DB_URL
+engine = create_engine(db_url)
 # Base.metadata.drop_all(engine)
 
 Base.metadata.create_all(engine)

@@ -1,10 +1,10 @@
 from models import Admin, Base, engine, Session
 
 # Replace with your actual details
-SUPERUSER_ID =  123456 # Your Telegram user ID
-USERNAME = ''
-FIRST_NAME = ''
-LAST_NAME = ''
+SUPERUSER_ID =  89779164 # Your Telegram user ID
+USERNAME = 'aaghania'
+FIRST_NAME = 'Arman'
+LAST_NAME = 'Aghania'
 
 # Create the session and add the superuser
 with Session() as session:
