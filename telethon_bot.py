@@ -348,8 +348,17 @@ class Bot:
                 await self.client.send_message(user_id, f"Your subscription has been updated and is active until {new_expiry_date.strftime('%Y-%m-%d %H:%M:%S')}.")
             else:
                 await self.client.send_message(user_id, "No additional days provided for the subscription update.")
-                
+
 
 if __name__ == '__main__':
     bot = Bot(api_id=API_ID, api_hash=API_HASH, token=TELEGRAM_TOKEN, db_uri=DB_URL)
     asyncio.run(bot.start())
+
+'''
+#TODO : 
+1. Remove users if the subscription expires
+2. Save All contents into the databse with tags
+3. Broadcast to all users for discounts with a handler like Im up for it so they can get discount code
+4. 
+
+'''
